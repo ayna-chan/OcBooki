@@ -78,34 +78,36 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
+    margin: 33px 0;
 }
 
 .hebergements-cards img {
     width: 100%;
-    height: 100px;
+    height: 140px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
-.hebergements-cards .card-rating {
-    margin-bottom: 5px;
+.hebergements-cards .card-subtitle {
+    margin: 5px 0px;
+    font-size: 14px;
 }
 
 .hebergements-cards .card-rating .fa-solid {
     font-size: 0.90em;
 }
 
-.hebergements-cards .card {
-    width: 250px;
-}
-
 .hebergements-cards .card-content {
-    margin: auto;
+    margin: -10px 0px 10px 10px;
+} 
+
+.hebergements-cards a {
+    flex: 1 0 27%;
 }
 
-/* .hebergements-cards a {
-    display: flex;
-} */
+.hebergements .more {
+    font-weight: bold;
+}
 
 /* <- my work */
 
@@ -157,8 +159,7 @@ a {
 }
 
 
-
-/* SECTION 3 ACTIVITE A MARSEILLE */
+/***** SECTION 3 ACTIVITE A MARSEILLE *****/
 
 .activites-a-marseille {
     padding: 50px 0px;
@@ -184,7 +185,7 @@ a {
     border-radius: 20px;
     padding: 0;
     overflow: hidden;
-    box-shadow: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));  
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.1));  
 }
 
 .activites-a-marseille .card img {
@@ -201,6 +202,13 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    .filtres {
+        flex-direction: column;
+    }
+
+
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -231,6 +239,16 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-card .card {
+        max-width: 216px;
+        max-height: 270px;
+     } 
+
+     .activites-card .card img {
+        height: 200px;
+     }
+
 }
 
 /* Small devices (phones, less than 768px) */
@@ -305,10 +323,12 @@ footer li {
     color: #0065FC;
     border-radius: 50%;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 h1 {
     font-size: 22px;
+    margin-bottom: -10px;
 }
 
 h2 { 
@@ -332,8 +352,8 @@ h2 {
 .recherche input {
     border: 1px solid #F2F2F2;
     padding: 10px 0px;
-    font-weight: 600;
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -344,8 +364,8 @@ h2 {
     border-bottom-right-radius: 15px;
     color: white;
     padding: 10px;
-    /* font-size: 16px; */
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 .recherche ::placeholder {
@@ -363,9 +383,14 @@ h2 {
     padding: 10px 20px;
     margin: 5px;
     font-weight: 700;
+    font-size: 15px;
     gap: 8px;
     display: flex;
     align-items: center;
+}
+
+.filtres button:hover {
+    background-color: #DEEBFF;
 }
 
 .filtres h2 {
