@@ -213,6 +213,7 @@ a {
 
     .filtres div {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .hebergements-and-populaires {
@@ -257,21 +258,87 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    body {
+        padding: 0 20px;
+    }
     header {
         flex-direction: column;
         text-align: center;
+        margin: 20px -20px;
     }
     
     nav ul {
         justify-content: center;
+        border-bottom: solid 2px #d9d9d9;
+    }
+
+    nav li {
+        padding-bottom: 14px;
+    }
+
+    nav ul a:hover {
+        border-top: none;
+        border-bottom: solid 2px #0065FC;
+        padding-bottom: 14px;
+    }
+
+    .filtres button {
+        flex: 1;
+    }
+
+    p {
+        display: flex;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
+    }
+
+    .hebergements-and-populaires .populaires {
+        margin: 20px -20px;
+        border-radius: 0%;
+        width: auto;
+    }
+
+    .hebergements-and-populaires{
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires div {
+        flex-direction: column;
+    }
+
+    .populaires-title {
+        align-items: flex-start;    
+    }
+
+    .populaires-cards a {
+        width: 100%;
     }
 
 
-    nav a:hover {
-        color: #0065FC;
-        border-bottom: solid 1px #0065FC;
-        padding-top: 14px;
+    .activites-card a {
+        flex: auto;
     }
+
+    .activites-a-marseille {
+        flex-direction: column;
+    }
+
+    .recherche button.loupe {
+        display: inline-flex;
+        border-radius: 30% 30%;
+    }
+
+    .rechercher {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        margin: 20px -20px
+    }
+
 }
 
 
@@ -304,6 +371,11 @@ nav a:hover {
     padding-top: 14px;
 }
 
+nav li {
+    border-top: 1px solid transparent;
+    padding-top: 14px;
+}
+
 footer {
     background-color: #F2F2F2;
     display: flex;
@@ -317,11 +389,6 @@ footer ul {
     font-size: medium;
     list-style-type: none;
     padding: 0;
-}
-
-nav li {
-    border-top: 1px solid transparent;
-    padding-top: 14px;
 }
 
 footer article {
@@ -382,6 +449,10 @@ h2 {
     padding: 10px;
     font-weight: 700;
     font-size: 16px;
+}
+
+.recherche .loupe {
+    display: none;
 }
 
 .recherche ::placeholder {
