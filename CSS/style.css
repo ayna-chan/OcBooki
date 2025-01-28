@@ -268,22 +268,33 @@ a {
     }
     
     nav ul {
-        justify-content: center;
-        border-bottom: solid 2px #d9d9d9;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        gap: 0 !important;
     }
-
+    
     nav li {
         padding-bottom: 14px;
+    }
+
+    nav a {
+        display: block;
+        border-bottom: solid 2px #d9d9d9;
+        padding-bottom: 14px;
+        padding-top: 0;
+        border-top: none !important;
     }
 
     nav ul a:hover {
         border-top: none;
         border-bottom: solid 2px #0065FC;
         padding-bottom: 14px;
+        padding-top: 0px;
     }
 
     .filtres button {
-        flex: 1;
+        flex: 1 0 32%;
     }
 
     p {
@@ -306,6 +317,10 @@ a {
 
     .hebergements-and-populaires div {
         flex-direction: column;
+    }
+
+    .hebergements-and-populaires div:nth-child(1){
+        flex-direction: row;
     }
 
     .populaires-title {
